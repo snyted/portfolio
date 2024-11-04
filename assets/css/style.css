@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   width: 1200px;
@@ -17,8 +21,10 @@ body {
   color: white;
 }
 
-html {
-  scroll-behavior: smooth;
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 ul li {
@@ -26,12 +32,11 @@ ul li {
 }
 
 span.span-blue {
-  color: #1e90ff;
+  color: #4169e1;
 }
 
 .header {
   display: flex;
-  justify-content: end;
   align-items: center;
   width: 100%;
   height: 100px;
@@ -41,6 +46,16 @@ span.span-blue {
   right: 0;
   background: #000;
   z-index: 1000;
+}
+.header p {
+  display: flex;
+  font-size: 14px;
+  gap: 5px;
+  text-align: center;
+  align-items: center;
+}
+.header p img {
+  width: 20px;
 }
 
 .header .nav {
@@ -72,9 +87,9 @@ span.span-blue {
   padding: 10px 40px;
   border: 0;
   border-radius: 30px;
-  box-shadow: 1px 1px 8px #731963;
+  box-shadow: 1px 1px 8px #4682b4;
   font-weight: bold;
-  background: #1e90ff;
+  background: #4682b4;
   color: #fff;
   cursor: pointer;
 }
@@ -85,13 +100,13 @@ span.span-blue {
   align-items: center;
   justify-content: center;
   color: #fff;
-  border-bottom: 1px solid #1e90ff;
-  padding: 250px 0;
+  border-bottom: 1px solid #40e0d0;
+  padding: 150px 0;
 }
 
 .pagina-principal h1 {
+  text-align: start;
   padding-bottom: 20px;
-  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -101,16 +116,17 @@ span.span-blue {
 }
 
 .pagina-principal .cv {
-  margin-top: 15px;
+  margin-top: 20px;
   border-style: none;
-  padding: 10px 40px;
+  padding: 15px 50px;
   border: 0;
   border-radius: 30px;
   font-weight: bold;
-  background: #1e90ff;
+  background: #00bfff;
   color: #fff;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 1rem;
 }
 
 .pagina-principal .cv:hover {
@@ -120,16 +136,27 @@ span.span-blue {
 
 .pagina-principal .gif-coding {
   margin-left: 100px;
+  animation: gif-float 2s ease-in-out infinite;
+}
+
+@keyframes gif-float {
+  0% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(-10px); 
+  }
+  100% {
+    transform: translateY(0); 
+  }
 }
 
 .tecnologias {
   padding: 120px 0;
-  border-bottom: 1px solid #1e90ff;
+  border-bottom: 1px solid #40e0d0;
 }
 
 .tecnologias h1 {
-  text-align: center;
-  font-size: 3rem;
   margin-bottom: 30px;
 }
 
@@ -156,6 +183,8 @@ span.span-blue {
 }
 
 .techs img {
+  position: relative;
+  display: inline-block;
   width: 80px;
   transition: 0.5s;
   border-radius: 10px;
@@ -163,9 +192,15 @@ span.span-blue {
 
 .techs img:hover {
   transform: scale(1.09);
+  filter: drop-shadow(0px 0px 3px #87cefa); /* Sombra azul ao passar o mouse */
 }
 
 .techs h3 {
   text-align: center;
   font-weight: 200;
+}
+
+.projetos {
+  padding: 120px 0;
+  border-bottom: 1px solid #1e90ff;
 }

@@ -11,11 +11,17 @@
     <main class="container">
       <!-- Começo Header -->
       <header class="header">
+        <a href="https://github.com/snyted" target="_blank">
+          <p>
+            <img src="assets/img/github-color-svgrepo-com.svg" alt="" />/snyted
+          </p>
+        </a>
+
         <nav class="nav">
           <div class="list-items">
-            <a class="group-link" href="#">Início</a>
-            <a class="group-link" href="#">Tecnologias</a>
-            <a class="group-link" href="#">Projetos</a>
+            <a class="group-link" href="#pagina-principal">Início</a>
+            <a class="group-link" href="#tecnologias">Tecnologias</a>
+            <a class="group-link" href="#projetos">Projetos</a>
             <a class="group-link" href="#">Sobre</a>
           </div>
 
@@ -27,7 +33,7 @@
       <!-- Fim do Header -->
 
       <!-- Começo da página principal -->
-      <section class="pagina-principal">
+      <section class="pagina-principal" id="pagina-principal">
         <div class="name">
           <h1>João Vitor Farias</h1>
           <h2>Desenvolvedor Front-End<span class="span-blue">.</span></h2>
@@ -37,7 +43,7 @@
               faz.</q
             >
           </p>
-          <button class="cv">Baixar CV</button>
+          <button class="cv" onclick="downloadFile()">Baixar CV</button>
         </div>
 
         <div class="gif-coding">
@@ -52,9 +58,11 @@
           ></dotlottie-player>
         </div>
       </section>
+      <!-- Fim página principal -->
 
-      <section class="tecnologias">
-        <h1>Meus <span class="span-blue">Conhecimentos</span></h1>
+      <!-- Tecnologias -->
+      <section class="tecnologias" id="tecnologias">
+        <h1>Meus <span class="span-blue">Conhecimentos.</span></h1>
 
         <h2>Front-End</h2>
         <div class="tecnologias-container">
@@ -68,11 +76,17 @@
             <h3>CSS</h3>
           </div>
           <div class="techs">
-            <img src="assets/img/javascript-svgrepo-com.svg" alt="JavaScript ícone" />
+            <img
+              src="assets/img/javascript-svgrepo-com.svg"
+              alt="JavaScript ícone"
+            />
             <h3>JavaScript</h3>
           </div>
           <div class="techs">
-            <img src="assets/img/bootstrap-svgrepo-com.svg" alt="Bootstrap ícone" />
+            <img
+              src="assets/img/bootstrap-svgrepo-com.svg"
+              alt="Bootstrap ícone"
+            />
             <h3>Bootstrap 5</h3>
           </div>
         </div>
@@ -80,7 +94,10 @@
         <h2>Back-end</h2>
         <div class="tecnologias-container">
           <div class="techs">
-            <img src="assets/img/django-svgrepo-com.svg" alt="Um framework usado no Python, nome: Django. ícone." />
+            <img
+              src="assets/img/django-svgrepo-com.svg"
+              alt="Um framework usado no Python, nome: Django. ícone."
+            />
             <h3>Django</h3>
           </div>
 
@@ -97,7 +114,10 @@
         <h2>Ferramentas</h2>
         <div class="tecnologias-container">
           <div class="techs">
-            <img src="assets/img/vscode2-svgrepo-com.svg" alt="VSCODE ide ícone." />
+            <img
+              src="assets/img/vscode2-svgrepo-com.svg"
+              alt="VSCODE ide ícone."
+            />
             <h3>VSCode</h3>
           </div>
 
@@ -106,12 +126,21 @@
             <h3>GIT</h3>
           </div>
           <div class="techs">
-            <img src="assets/img/github-color-svgrepo-com.svg" alt="Github ícone" />
+            <img
+              src="assets/img/github-color-svgrepo-com.svg"
+              alt="Github ícone"
+            />
             <h3>GitHub</h3>
           </div>
         </div>
       </section>
+      <!-- Fim Tecnologias -->
+
+      <section class="projetos" id="projetos">
+        <h1>Meu <span class="span-blue">Portfólio.</span></h1>
+      </section>
     </main>
+    <!-- Fim do conteúdo principal -->
   </body>
 
   <script src="assets/js/script.js"></script>
