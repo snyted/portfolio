@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Conteúdo principal do site -->
@@ -32,8 +33,12 @@
       <!-- Fim do Header -->
 
       <!-- Começo da página principal -->
-      <section class="pagina-principal" id="pagina-principal">
-        <div class="name">
+      <section
+        class="pagina-principal"
+        id="pagina-principal"
+        data-aos="fade-down"
+      >
+        <div class="name" data-aos="fade-right">
           <h1>João Vitor Farias</h1>
           <h2>Desenvolvedor Front-End<span class="span-blue">.</span></h2>
           <p>
@@ -60,11 +65,13 @@
       <!-- Fim página principal -->
 
       <!-- Tecnologias -->
-      <section class="tecnologias" id="tecnologias">
-        <h1>Meus <span class="span-blue">Conhecimentos.</span></h1>
+      <section class="tecnologias" id="tecnologias" data-aos="fade-down">
+        <h1 data-aos="zoom-in">
+          Meus <span class="span-blue">Conhecimentos.</span>
+        </h1>
 
-        <h2>Front-End</h2>
-        <div class="tecnologias-container">
+        <h2 data-aos="fade-right">Front-End</h2>
+        <div class="tecnologias-container" data-aos="fade-right">
           <div class="techs">
             <img src="assets/img/html-5-svgrepo-com.svg" alt="html ícone" />
             <h3>HTML</h3>
@@ -90,8 +97,8 @@
           </div>
         </div>
 
-        <h2>Back-end</h2>
-        <div class="tecnologias-container">
+        <h2 data-aos="fade-left">Back-end</h2>
+        <div class="tecnologias-container" data-aos="fade-left">
           <div class="techs">
             <img
               src="assets/img/django-svgrepo-com.svg"
@@ -110,8 +117,8 @@
           </div>
         </div>
 
-        <h2>Ferramentas</h2>
-        <div class="tecnologias-container">
+        <h2 data-aos="fade-up">Ferramentas</h2>
+        <div class="tecnologias-container" data-aos="fade-up">
           <div class="techs">
             <img
               src="assets/img/vscode2-svgrepo-com.svg"
@@ -135,12 +142,12 @@
       </section>
       <!-- Fim Tecnologias -->
 
-      <section class="portfolio" id="projetos">
+      <section class="portfolio" id="projetos" data-aos="fade-down">
         <h1>Meu <span class="span-blue">Portfólio.</span></h1>
 
         <div class="container-projects">
           <div class="projects">
-            <div class="explaining-project">
+            <div class="explaining-project" data-aos="fade-right">
               <h2>Todo List</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius
@@ -149,16 +156,28 @@
                 suscipit labore amet.
               </p>
             </div>
-            <div class="img-hover" data-link="https://snyted.github.io/todo-list/">
+            <div
+              class="img-hover"
+              data-link="https://snyted.github.io/todo-list/"
+              data-aos="fade-left"
+            >
               <img src="assets/img/todolist.png" alt="" class="img-project" />
             </div>
           </div>
 
           <div class="projects">
-            <div class="img-hover" data-link="https://snyted.github.io/gerador-de-senha/">
-              <img src="assets/img/gerador-de-senha.png" alt="" class="img-project" />
+            <div
+              class="img-hover"
+              data-link="https://snyted.github.io/gerador-de-senha/"
+              data-aos="fade-right"
+            >
+              <img
+                src="assets/img/gerador-de-senha.png"
+                alt=""
+                class="img-project"
+              />
             </div>
-            <div class="explaining-project">
+            <div class="explaining-project" data-aos="fade-left">
               <h2>Gerador de Senha</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius
@@ -172,26 +191,49 @@
       </section>
 
       <!-- Sobre mim -->
-      <section class="sobre" id="sobre">
-         <img src="assets/img/eu2.PNG" alt="" class="my-pic">
+      <section class="sobre" id="sobre" data-aos="fade-down">
+        <img
+          src="assets/img/eu2.PNG"
+          alt=""
+          class="my-pic"
+          data-aos="fade-right"
+        />
 
-        <div class="my-info">
-          <h1>Muito prazer, me chamo <span class="span-blue">João Vitor Farias</span></h1>
-          <p>Sou um desenvolvedor apaixonado por criar soluções digitais inovadoras e funcionais. Atualmente, estou cursando Técnico em Desenvolvimento de Sistemas e graduação em Análise e Desenvolvimento de Sistemas (ADS), buscando sempre melhorar minhas habilidades e expandir meus conhecimentos na área. Com experiência em projetos próprios, estou focado em criar interfaces interativas, responsivas e eficientes. Meu objetivo é continuar crescendo como profissional, assumindo novos desafios e contribuindo para projetos significativos.</p>
-          <img src="assets/img/github-142-svgrepo-com.svg" alt="">
+        <div class="my-info" data-aos="fade-left">
+          <h1>
+            Muito prazer, me chamo
+            <span class="span-blue">João Vitor Farias</span>
+          </h1>
+          <p>
+            Sou um desenvolvedor apaixonado por criar soluções digitais
+            inovadoras e funcionais. Atualmente, estou cursando Técnico em
+            Desenvolvimento de Sistemas e graduação em Análise e Desenvolvimento
+            de Sistemas (ADS), buscando sempre melhorar minhas habilidades e
+            expandir meus conhecimentos na área. Com experiência em projetos
+            próprios, estou focado em criar interfaces interativas, responsivas
+            e eficientes. Meu objetivo é continuar crescendo como profissional,
+            assumindo novos desafios e contribuindo para projetos
+            significativos.
+          </p>
+          <img src="assets/img/github-142-svgrepo-com.svg" alt="" />
         </div>
-
-       </section>
+      </section>
     </main>
     <!-- Fim do conteúdo principal -->
-     <footer>
-
-     </footer>
+    <footer></footer>
   </body>
 
-  <script src="assets/js/script.js"></script>
   <script
     src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
     type="module"
   ></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Inicializando AOS -->
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="assets/js/script.js"></script>
 </html>
