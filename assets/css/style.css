@@ -19,6 +19,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: white;
+  width: 100%;
 }
 h1 {
   font-size: 3rem;
@@ -52,7 +53,6 @@ textarea:focus {
 
 /* Conteúdo principal */
 .container {
-  min-width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -63,7 +63,9 @@ textarea:focus {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* Isso remove o espaçamento do lado esquerdo */
+  margin-right: calc(-50vw + 50%); /* Isso remove o espaçamento do lado direito */
   height: 100px;
   position: sticky;
   top: 0;
@@ -290,7 +292,9 @@ textarea:focus {
 
 /* Sessão Sobre mim */
 .sobre {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* Isso remove o espaçamento do lado esquerdo */
+  margin-right: calc(-50vw + 50%); /* Isso remove o espaçamento do lado direito */
   display: flex;
   justify-content: center;
   align-items: center;
