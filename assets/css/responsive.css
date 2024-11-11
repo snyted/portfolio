@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+    .sobre {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobre img {
+        max-width: 80%;
+        padding: 10px;
+    }
+
+    .sobre .my-info {
+        word-wrap: break-word;
+    }
+}

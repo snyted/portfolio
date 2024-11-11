@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
@@ -26,9 +27,7 @@
             <a class="group-link" href="#sobre">Sobre</a>
           </div>
         </nav>
-        <a href="#fale-comigo">
-          <button class="btn-contato">Contato</button>
-        </a>
+          <button class="contact-button">Contato</button>
       </header>
       <!-- Fim do Header -->
 
@@ -165,7 +164,16 @@
             </div>
           </div>
 
-          <div class="projects">
+          <div class="projects reverse">
+            <div class="explaining-project" data-aos="fade-left">
+              <h2>Gerador de Senha</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius
+                voluptas repellat beatae? Provident incidunt, assumenda quam
+                quidem cumque tenetur qui recusandae quod nobis obcaecati hic at
+                suscipit labore amet.
+              </p>
+            </div>
             <div
               class="img-hover"
               data-link="https://snyted.github.io/gerador-de-senha/"
@@ -177,14 +185,51 @@
                 class="img-project"
               />
             </div>
+          </div>
+
+          <div class="projects">
             <div class="explaining-project" data-aos="fade-left">
-              <h2>Gerador de Senha</h2>
+              <h2>Jogo da Memoria</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius
                 voluptas repellat beatae? Provident incidunt, assumenda quam
                 quidem cumque tenetur qui recusandae quod nobis obcaecati hic at
                 suscipit labore amet.
               </p>
+            </div>
+            <div
+              class="img-hover"
+              data-link="https://snyted.github.io/memory-game/"
+              data-aos="fade-right"
+            >
+              <img
+                src="assets/img/memory-game.png"
+                alt=""
+                class="img-project"
+              />
+            </div>
+          </div>
+
+          <div class="projects reverse">
+            <div class="explaining-project" data-aos="fade-left">
+              <h2>Jogo do Detona Ralph</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea eius
+                voluptas repellat beatae? Provident incidunt, assumenda quam
+                quidem cumque tenetur qui recusandae quod nobis obcaecati hic at
+                suscipit labore amet.
+              </p>
+            </div>
+            <div
+              class="img-hover"
+              data-link="https://snyted.github.io/detona-ralph-game/"
+              data-aos="fade-right"
+            >
+              <img
+                src="assets/img/detona-ralph-game.png"
+                alt=""
+                class="img-project"
+              />
             </div>
           </div>
         </div>
@@ -201,7 +246,7 @@
 
         <div class="my-info" data-aos="fade-left">
           <h1>
-            Muito prazer, me chamo
+            Muito prazer, me chamo <br />
             <span class="span-blue">João Vitor Farias</span>
           </h1>
           <p>
@@ -215,14 +260,43 @@
             assumindo novos desafios e contribuindo para projetos
             significativos.
           </p>
-          <img src="assets/img/github-142-svgrepo-com.svg" alt="" />
+          <a href=" https://github.com/snyted"
+            ><img src="assets/img/github-142-svgrepo-com (2).svg" alt=""
+          /></a>
+          <a href="https://www.linkedin.com/in/snyted"
+            ><img src="assets/img/linkedin-1-svgrepo-com.svg" alt=""
+          /></a>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section class="contato" id="contato-modal">
+        <button class="btn-close">X</button>
+        <h1>Fale <span class="span-blue">comigo.</span></h1>
+        <div>
+          <dotlottie-player class="gif-modal" src="https://lottie.host/63abcf80-c382-42db-b0d4-82e6f4681a06/6wgU66xNCA.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+          <form class="form-contato">
+            <input type="text" placeholder="Digite seu nome completo" />
+            <input type="email" placeholder="Digite seu email" />
+            <input type="phone" placeholder="Digite seu telefone" />
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              placeholder="Mensagem"
+            ></textarea>
+            <button class="submit-btn">Enviar</button>
+          </form>
         </div>
       </section>
     </main>
     <!-- Fim do conteúdo principal -->
     <footer></footer>
   </body>
-
+  <!-- Lottie -->
+  <script
+    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+    type="module"
+  ></script>
   <script
     src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
     type="module"

@@ -1,23 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Seletores globais */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-html,
 body {
   background: #000;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: white;
-  overflow-x: hidden
 }
 h1 {
   font-size: 3rem;
@@ -36,11 +37,23 @@ ul li {
 span.span-blue {
   color: #4169e1;
 }
+
+input,
+textarea,
+input:focus,
+textarea:focus {
+  border: none;
+  box-shadow: none;
+  background: none;
+  outline: none;
+  overflow: hidden;
+}
 /* Fim Seletores Globais */
 
 /* Conteúdo principal */
 .container {
   min-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -70,31 +83,26 @@ span.span-blue {
 .header p img {
   width: 20px;
 }
-
 .header .nav {
   display: flex;
   align-items: center;
   padding: 0 20px;
 }
-
 .header .nav .list-items {
   display: flex;
   gap: 50px;
   margin: 0 auto;
 }
-
 .header a {
   text-decoration: none;
   color: #6d6d6d;
   transition: 0.2s;
 }
-
 .header a:hover {
   color: #fff;
   transform: scale(1.08);
 }
-
-.header .btn-contato {
+.header .contact-button {
   padding: 10px 40px;
   border: 0;
   border-radius: 30px;
@@ -103,6 +111,7 @@ span.span-blue {
   background: #4682b4;
   color: #fff;
   cursor: pointer;
+  animation: pulse 2s infinite;
 }
 /* Fim Cabeçalho */
 
@@ -142,26 +151,14 @@ span.span-blue {
 }
 
 .pagina-principal .cv:hover {
-  box-shadow: 0px 0px 8px #1e90ff;
   transform: scale(1.05);
 }
 
 .pagina-principal .gif-coding {
   margin-left: 100px;
-  animation: gif-float 2s ease-in-out infinite;
+  animation: float 2s ease-in-out infinite;
 }
 
-@keyframes gif-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 /* Fim da página inicial */
 
 /* Começo das Tecnologias */
@@ -245,6 +242,11 @@ span.span-blue {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+.reverse {
+  flex-direction: row-reverse; /* Inverte a ordem dos elementos no projeto */
+}
+
 .projects .explaining-project h2 {
   font-size: 2rem;
   text-align: center;
@@ -268,7 +270,7 @@ span.span-blue {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 43% 57%;
+  object-position: 50% 50%;
   border-radius: 10px;
   transition: filter 0.3s ease;
 }
@@ -291,24 +293,24 @@ span.span-blue {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: #fff;
   padding: 100px 50px;
-  flex-wrap: wrap;
 }
 
 .sobre > img {
   max-width: 500px;
   max-height: 500px;
   border-radius: 100%;
-  margin-right: 50px;
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.6);
-  animation: gif-float 2s ease-in-out infinite;
+  margin-right: 2rem;
+  box-shadow: 0 0 10px 5px #4169e1;
+  animation: gif-float 4s ease-in-out infinite;
 }
 
 .sobre .my-info {
   color: #000;
   text-align: justify;
-  word-break: break-all;
+  word-wrap: break-word;
 }
 
 .my-info > h1 {
@@ -316,7 +318,155 @@ span.span-blue {
   margin-bottom: 30px;
 }
 
-.my-info img {
+.my-info > p {
+  word-wrap: break-word;
+}
+
+.my-info a > img {
   margin-top: 30px;
-  width: 30px;
+  margin-right: 10px;
+  width: 64px;
+}
+
+.my-info a > img:hover {
+  animation: 1s ease-in-out 0s normal none infinite running pulse;
+}
+
+/* Fim Sobre */
+
+/* Contato */
+.contato {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 80%;
+  background-color: #ffffff;
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 1px #4169e1;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.contato h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.contato > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato .form-contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  max-width: 80%;
+  height: 100%;
+  padding: 20px;
+}
+
+.contato .form-contato input,
+textarea {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  color: #000;
+  border-bottom: 1px solid rgb(77, 77, 77);
+}
+
+.contato .form-contato input:hover,
+textarea:hover {
+  transform: scale(1.05);
+}
+
+.contato .gif-modal {
+  margin-top: -50px;
+}
+
+.contato .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #4169e1;
+  border: none;
+  background: none;
+}
+
+.contato .btn-close:hover {
+  color: #4169e1;
+  scale: 1.2;
+}
+
+.contato .submit-btn {
+  max-width: 300px;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  background-color: #4169e1;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+.contato .submit-btn:hover {
+  background-color: #17254d;
+  transform: scale(1.05);
+}
+/* Animações e efeitos */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate-flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

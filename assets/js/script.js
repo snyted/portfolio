@@ -34,3 +34,17 @@ containers.forEach((container) => {
      container.style.boxShadow = "none"
   });
 });
+
+
+const contactButton = document.querySelector(".contact-button").addEventListener("click", openModal);
+
+function openModal() {
+  // Abre o modal
+  const contato = document.querySelector("#contato-modal");
+  const closeModal = document.querySelector(".btn-close");
+  contato.style.display = "flex";
+  // Fecha o modal
+  closeModal.addEventListener("click", () => {
+    contato.style.display = "none";
+  });
+}
