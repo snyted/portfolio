@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Conteúdo principal do site -->
@@ -47,14 +47,13 @@
           </p>
           <button class="cv" onclick="downloadFile()">Baixar CV</button>
         </div>
-
         <div class="gif-coding">
           <dotlottie-player
             class="gif"
             src="https://lottie.host/c666e2f2-c5d4-47e1-8b16-ef4441dac4b9/H05gesXl9I.json"
             background="transparent"
             speed="1"
-            style="max-width: 400px; height: 400px"
+            style="max-width: 400px; max-height: 400px"
             loop
             autoplay
           ></dotlottie-player>
@@ -290,23 +289,19 @@
     </main>
     <!-- Fim do conteúdo principal -->
     <footer></footer>
-  </body>
-  <!-- Lottie -->
-  <script
-    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-    type="module"
-  ></script>
-  <script
-    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-    type="module"
-  ></script>
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Inicializando AOS -->
-  <script>
-    AOS.init();
   </script>
-
-  <script src="assets/js/script.js"></script>
+  <!-- AOS -->
+  <script
+  src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+  type="module"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> 
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  
+    <script defer src="assets/js/script.js"></script>
+  </body>
 </html>
