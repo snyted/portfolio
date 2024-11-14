@@ -247,6 +247,7 @@ textarea:focus {
   word-wrap: break-word;
   overflow-wrap: break-word;
   margin: 0 20px;
+  overflow-x: hidden;
 }
 
 .reverse {
@@ -264,6 +265,37 @@ textarea:focus {
   margin-bottom: 20px;
   text-align: justify;
   padding: 0 20px;
+}
+
+.projects .explaining-project .lista-funcionalidades {
+  margin-bottom: 20px;
+}
+
+.projects .explaining-project .lista-funcionalidades>li {
+  text-align: start;
+  list-style: circle;
+  color: white;
+  font-weight: 200;
+  font-size: smaller;
+}
+
+.projects .explaining-project .dev-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px
+}
+
+.projects .explaining-project .dev-tools img{
+  margin-top: 10px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.projects .explaining-project .dev-tools .aos-icon {
+  width: 80px;
+  margin-left: -10px;
 }
 
 .projects .img-hover {
@@ -454,6 +486,14 @@ textarea:hover {
 }
 
 /* Fim contato */
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 /* Animações e efeitos */
 @keyframes pulse {
   0% {
