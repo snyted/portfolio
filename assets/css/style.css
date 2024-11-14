@@ -62,6 +62,22 @@ textarea:focus {
   margin: 0 auto;
 }
 
+/* Ir pro topo da página */
+.container .back-to-top {
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+}
+
+.container .back-to-top:hover {
+  transform: scale(1.1);
+}
+
 /* Cabeçalho */
 .header {
   display: flex;

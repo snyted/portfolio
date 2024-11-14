@@ -24,19 +24,20 @@ containers.forEach((container) => {
   container.addEventListener("mouseenter", () => {
     img.style.filter = "brightness(0.3)";
     plusIcon.style.display = "block";
-     container.style.boxShadow = "0 0 3px #1e90ff"
-     container.style.borderRadius = "10px"
+    container.style.boxShadow = "0 0 3px #1e90ff";
+    container.style.borderRadius = "10px";
   });
 
   container.addEventListener("mouseleave", () => {
     img.style.filter = "brightness(1)";
     plusIcon.style.display = "none";
-     container.style.boxShadow = "none"
+    container.style.boxShadow = "none";
   });
 });
 
-
-const contactButton = document.querySelector(".contact-button").addEventListener("click", openModal);
+const contactButton = document
+  .querySelector(".contact-button")
+  .addEventListener("click", openModal);
 
 function openModal() {
   // Abre o modal
@@ -47,4 +48,22 @@ function openModal() {
   closeModal.addEventListener("click", () => {
     contato.style.display = "none";
   });
+}
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const secondSection = document.querySelector(".tecnologias").offsetTop;
+  if (document.body.scrollTop > secondSection || document.documentElement.scrollTop > secondSection) {
+    document.querySelector(".back-to-top").style.display = "block";
+  } else {
+    document.querySelector(".back-to-top").style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0; // Para Safari
+  document.documentElement.scrollTop = 0;
 }
