@@ -67,3 +67,44 @@ function scrollToTop() {
   document.body.scrollTop = 0; // Para Safari
   document.documentElement.scrollTop = 0;
 }
+
+// Formulario
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contatoForm");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // Impede o envio tradicional
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      if (response.ok) {
+        Swal.fire({
+          icon: "success",
+          title: "Mensagem enviada!",
+          text: "Obrigado por entrar em contato.",
+          confirmButtonColor: "#1e90ff"
+        });
+        form.reset();
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Erro ao enviar",
+          text: "Tente novamente mais tarde.",
+          confirmButtonColor: "#ff4d4f"
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Erro inesperado",
+        text: "Verifique sua conexão e tente de novo.",
+      });
+    }
+  });
+});
