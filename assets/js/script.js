@@ -1,7 +1,7 @@
 // Download do Currículo
 function downloadFile() {
   const link = document.createElement("a");
-  link.href = "Documentos/curriculo.pdf";
+  link.href = "assets/docs/curriculo.pdf";
   link.download = "Currículo.pdf";
   link.click();
 }
@@ -64,7 +64,7 @@ function scrollFunction() {
 }
 
 function scrollToTop() {
-  document.body.scrollTop = 0; // Para Safari
+  document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contatoForm");
 
   form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // Impede o envio tradicional
+    e.preventDefault();
 
     const formData = new FormData(form);
 
